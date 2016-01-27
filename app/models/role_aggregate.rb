@@ -20,7 +20,9 @@ class RoleAggregate < ActiveRecord::Base
     before_destroy :delete_dash_widgets
     
     DEFAULT_VIEWS = ['graph', 'filter', 'spreadsheet']
-    
+   
+    delegate :title, to: :lime_survey, prefix: true, allow_nil: true
+
     def data_table_exists?
       lime_data.table_exists?
     end

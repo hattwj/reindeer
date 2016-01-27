@@ -37,6 +37,9 @@ class PermissionGroup < ActiveRecord::Base
         return result
     end
 
+
+    ##
+    # TODO: Refactor this into anything, decorator etc...
     def explain_role_aggregates_for user
         details = []
         result = role_aggregates.select{|ra|

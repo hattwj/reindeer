@@ -10,7 +10,7 @@
         <% details, ra = user.permission_group.explain_role_aggregates_for(user) %>
         <dl>
         <% details.each do |ra, detail| %>
-            <dt><%= ra.lime_survey.title %></dt>
+            <dt><%= ra.lime_survey_title %></dt>
             <dd><%= detail %></dd>
         <% end %>
         </dl>
